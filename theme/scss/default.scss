@@ -529,6 +529,35 @@ slide.fill {
   @include background-size(cover);
 }
 
+slide.fit {
+  background-repeat: no-repeat;
+  @include border-radius($slide-border-radius);
+  @include background-size(contain);
+  background-position: center center;
+}
+
+img.fitheight {
+  height: 100%;
+  width: auto;
+}
+
+img.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 500px;
+  max-width: 100px;
+  margin-top: 1em;
+  margin-right: 0.5em;
+}
+
+.block {
+  display: block;
+}
+
+.floatleft {
+  float: left;
+}
+
 /* Size variants */
 
 article.smaller {
