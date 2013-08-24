@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/google_developers_logo.png"></span>
+    </article>
+  </slide>
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <div class="block">
+        <img class="avatar block floatleft" src="images/avatar.jpg" />
+        <p class="block floatleft" data-config-presenter><!-- populated from slide_config.json --></p>
+      </div>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Agenda</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Introducción
+          <ul>
+            <li>¿Que son?</li>
+            <li>¿Por qué?</li>
+            <li>Lifecycle</li>
+            <li>FragmentManager</li>
+            <li>bla bla bla</li>
+          </ul>
+        </li>
+        <li>Cómo usarlos
+          <ul>
+            <li>En layout</li>
+            <li>En código</li>
+            <li>Tipos</li>
+          </ul>
+        </li>
+        <li>Extras &amp; Gotchas</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground" style="background: url(images/aliens.jpg) repeat center"></slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Fragments</h2>
+      <h3>101</h3>
+    </hgroup>
+    <article>
+      <p>Son:</p>
+      <ul class="build">
+        <li>Pure awesomeness</li>
+        <li>Reusables</li>
+        <li>Único proposito</li>
+        <li>Dinámicos &amp; Adaptables</li>
+      </ul>
+    </article>
+  </slide>
+   
+   <slide class="fit nobackground" style="background-image: url(images/1-framed.png)"></slide>
+   <slide class="fit nobackground" style="background-image: url(images/2-framed.png)"></slide>
+   <slide class="fit nobackground" style="background-image: url(images/3-framed.png)"></slide>
+   <slide class="fit nobackground" style="background-image: url(images/4-framed.png)"></slide>
+   <slide class="fit nobackground" style="background-image: url(images/5-framed.png)"></slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Lifecycle, FragmentManager, etc.</h2>
+    </hgroup>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Lifecycle comparado con Activity</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <a href="images/activity_fragment_lifecycle.png">
+        <img src="images/activity_fragment_lifecycle.png" alt="Lifecycle comparado con Activity" class="fitheight">
+      </a>
+      <footer class="source">developer.android.com/guide/components/fragments.html</footer>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Lifecycle</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <a href="images/fragment_lifecycle.png">
+        <img src="images/fragment_lifecycle.png" alt="Lifecycle" class="fitheight">
+      </a>
+      <footer class="source">developer.android.com/guide/components/fragments.html</footer>
+    </article>
+  </slide>
+  
+  <slide class="fill nobackground white" style="background-image: url(images/manager.jpg)">
+    <hgroup>
+      <h2 class="white">FragmentManager</h2>
+    </hgroup>
+      <article class="white">
+          <ul class="build">
+              <li><code class="white">beginTransaction()</code></li>
+              <li><code class="white">findFragmentById()</code></li>
+              <li><code class="white">findFragmentByTag()</code></li>
+          </ul>
+      </article>
+    <footer class="source white">textbookstop.wordpress.com/2010/11/04/speculation-about-michael-scotts-replacement-on-the-office/</footer>
+  </slide>
+  
+  <slide class="fill nobackground white" style="background-image: url(images/transaction.gif)">
+    <hgroup>
+      <h2 class="white">FragmentTransaction</h2>
+    </hgroup>
+      <article class="white">
+          <ul class="build">
+              <li><code class="white">commit()</code></li>
+              <li><code class="white">commitAllowingStateLoss()</code></li>
+              <li>Operaciones sobre fragments
+                <ul class="build">
+                 <li><code class="white">add</code></li>
+                 <li><code class="white">remove</code></li>
+                 <li><code class="white">hide</code></li>
+                 <li><code class="white">show</code></li>
+                 <li><code class="white">replace</code></li>
+          </ul>
+      </article>
+    <footer class="source white">www.tumblr.com/tagged/drug-life</footer>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Propiedades</h2>
+      <h3>entre otras</h3>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Id</li>
+        <li>Tag</li>
+        <li>Arguments</li>
+        <li>Resources</li>
+        <li>Otras del framework & user defined</li>
+      </ul>
+    </article>
+  </slide>
+  
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Cómo usarlos</h2>
+      <h3>¡Por fin!</h3>
+    </hgroup>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Hello Fragments</h2>
+      <h3>Subclass Fragment</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="java">
+package info.evelio.fragments;
+// imports
+// HelloFragment.java
+public class HelloFragment <b>extends Fragment</b> {
+  @Override
+  public View onCreateView(LayoutInflater inflater, ViewGroup container,
+        Bundle savedInstanceState) {
+    <b>return inflater.inflate(R.layout.fragment_hello, container, false);</b>
+  }
+}
+      </pre>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Hello Fragments</h2>
+      <h3>Layout</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="xml">
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!-- res/layout/fragment_hello.xml --&gt;
+&lt;FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"&gt;
+  &lt;TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:text="@string/hello_fragments"
+      /&gt;
+&lt;/FrameLayout&gt;
+      </pre>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+      <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
+      <hgroup class="auto-fadein">
+          <h2>Instanciando Fragments</h2>
+          <h3>Desde layout</h3>
+      </hgroup>
+  </slide>
+
+  <slide>
+      <hgroup>
+          <h2>Hello Fragments</h2>
+          <h3>Activity</h3>
+      </hgroup>
+      <article>
+      <pre class="prettyprint" data-lang="java">
+package info.evelio.fragments;
+// imports
+// MainActivity.java
+public class MainActivity <b>extends FragmentActivity</b> {
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+  }
+}
+      </pre>
+      </article>
+  </slide>
+
+  <slide>
+      <hgroup>
+          <h2>Hello Fragments</h2>
+          <h3>Activity Layout</h3>
+      </hgroup>
+      <article>
+      <pre class="prettyprint" data-lang="xml">
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!-- res/layout/activity_main.xml --&gt;
+&lt;merge xmlns:android="http://schemas.android.com/apk/res/android"&gt;
+  &lt;fragment
+      android:name="info.evelio.fragments.HelloFragment"
+      android:id="@+id/hello_fragment"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" /&gt;
+&lt;/merge&gt;
+      </pre>
+      </article>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/drumroll.gif)">
+      <footer class="source white">pitchdark.com/blog/project-reboot-phase-3-results/</footer>
+  </slide>
+
+  <slide class="fit nobackground" style="background-image: url(images/hello_fragments.png)">
+      <hgroup>
+          <h2>OMG It works!</h2>
+      </hgroup>
+  </slide>
+
+  <slide class="segue dark nobackground">
+      <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
+      <hgroup class="auto-fadein">
+          <h2>Instanciando Fragments</h2>
+          <h3>Desde código</h3>
+      </hgroup>
+  </slide>
+
+  <slide>
+      <hgroup>
+          <h2>Fragment instance</h2>
+      </hgroup>
+      <article>
+      <pre class="prettyprint" data-lang="java">
+// ...
+HelloFragment fragment = new HelloFragment();
+// ...
+      </pre>
+      <pre class="prettyprint" data-lang="java">
+// ...
+HelloFragment fragment =
+          Fragment.instantiate(context, HelloFragment.class.getName());
+// ...
+      </pre>
+      </article>
+      <pre class="prettyprint" data-lang="java">
+// ...
+HelloFragment fragment =
+          Fragment.instantiate(context, HelloFragment.class.getName(), args);
+// ...
+      </pre>
+      </article>
+  </slide>
+
+  <slide>
+      <hgroup>
+          <h2>Hello Fragments</h2>
+          <h3>Agregando el fragment</h3>
+      </hgroup>
+      <article>
+      <pre class="prettyprint" data-lang="java">
+getSupportFragmentManager()
+  .<b>beginTransaction()</b>
+  .add(android.R.id.content, fragment) // (add, replace, hide, etc.)
+  .<b>commit()</b>;
+      </pre>
+      </article>
+  </slide>
+
+  <slide>
+      <hgroup>
+          <h2>Full Activity</h2>
+      </hgroup>
+      <article>
+      <pre class="prettyprint" data-lang="java">
+package info.evelio.fragments;
+// imports
+public class MainActivity extends FragmentActivity {
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    HelloFragment fragment = new HelloFragment();
+
+    <b>if (savedInstanceState == null) {</b>
+      getSupportFragmentManager()
+          .beginTransaction()
+          .add(android.R.id.content, fragment)
+          .commit();
+     <b>}</b>
+  }
+}
+      </pre>
+      </article>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/drumroll.gif)">
+      <footer class="source white">pitchdark.com/blog/project-reboot-phase-3-results/</footer>
+  </slide>
+
+  <slide class="fit nobackground" style="background-image: url(images/hello_fragments.png)">
+      <hgroup>
+          <h2>Es lo mismo :P</h2>
+      </hgroup>
+  </slide>
+
+  <slide>
+      <hgroup>
+          <h2>Tipos</h2>
+      </hgroup>
+      <article>
+          <ul class="build">
+            <li>UI Fragment</li>
+            <li>Hidden (oculto por defecto, se muestra cuando se necesita)</li>
+            <li>Dialogs</li>
+            <li>Worker/Headless fragment (pueden usar retain instance)</li>
+            <li>Nested fragments</li>
+          </ul>
+      </article>
+  </slide>
+
+  <slide>
+      <hgroup>
+          <h2>Comunicación</h2>
+      </hgroup>
+      <article>
+          <ul class="build fade">
+              <li><code>findFragmentBy*</code> y llamar sus métodos</li>
+              <li><code>Activity implements interface</code> set <code>onAttach</code> unset <code>onDetach</code></li>
+              <li><code>Events</code> & <code>Bus</code></li>
+          </ul>
+      </article>
+  </slide>
+
+  <slide>
+      <hgroup>
+          <h2>Extras & Gotchas</h2>
+      </hgroup>
+      <article>
+        <ul class="build">
+          <li>FragmentTransaction
+            <ul class="build">
+              <li>Backstack</li>
+              <li><code>isAddToBackStackAllowed()</code></li>
+              <li>Transaction animations</li>
+            </ul>
+          </li>
+
+          <li>ActionBar
+            <ul class="build">
+              <li><code>setHasOptionsMenu</code></li>
+              <li><code>onCreateOptionsMenu</code></li>
+              <li><code>onOptionsItemSelected</code></li>
+            </ul>
+          </li>
+          <li><code>onHiddenChange</code>, <code>setUserVisibleHint</code> y <code>setMenuVisibility</code></li>
+          <li><code>startActivityForResult</code> 16 bits menos significativos para <code>requestCode</code></li>
+
+          <li><strong>No usar</strong> <code>merge</code> cómo el root en el layout view de un fragment</li>
+          <li>Cuidado con nested fragments en el layout de un fragment</li>
+          <li>Cuidado con ids/tags repetidos</li>
+        </ul>
+      </article>
+  </slide>
+
+  <slide class="segue nobackground">
+    <article class="flexbox vcenter">
+      <img src="images/telly.png" alt="Telly" title="Telly, Inc. logo">
+      <footer class="source"><a href="http://telly.com/about/careers">telly.com/about/careers</a></footer>
+    </article>
+  </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;¡Gracias!&gt;</h2>
+      <p>¿Preguntas?</p>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="logoslide dark nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/google_developers_logo_white.png"></span>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+</body>
+</html>
